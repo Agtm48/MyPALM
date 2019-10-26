@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <meta http-equiv="expires" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT">
   <title>PALM</title>
 
   <!-- Bootstrap core CSS -->
@@ -23,8 +23,9 @@
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
+  <link href="css/faq.css" rel="stylesheet">
 
-  <link rel='icon' href='ActualPALM.ico' type='image/x-icon'/ >
+  <link rel='icon' href='favicon.ico' type='image/x-icon'/>
   <script src="jquery-3.3.1.min.js"></script>
   <script src="bootstrap.min.js"></script>
 
@@ -52,6 +53,9 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#faq-scroll-stop">FAQ</a>
+            </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li>
           <li class="nav-item">
@@ -66,6 +70,9 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
+          <!-- <div class="intro-heading text-uppercase">Welcome to PALM!</div>
+        <div class="intro-lead-in">The most advanced Pnuemonia detection algorithm in the world</div>
+        <a hidden = "true" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>-->
       </div>
     </div>
   </header>
@@ -81,27 +88,27 @@
          </div>
          <div class="row text-center">
               <div class="custom-file">
-               <input type="file" class="custom-file-input" id="filePicker">
+               <input type="file" class="custom-file-input" id="filePicker" submit="image/jpg, image/png, image/jpeg">
                <label class="custom-file-label" for="customFile">Choose file</label>
              </div>
               <div class="mt-3">
                <button type="submit" class="btn btn-primary" id="predict-button">Predict</button>
              </div>
   
-             <div class="mt-3">
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>PALM score: <span id="Pneumonia-predict" hidden=true></span></p>
+             <div class="col-lg-12 mt-3">
+                <p><br><br>PALM score: <span id="Pneumonia-predict" hidden=true></span></p>
                 <img id="selected-image" src="">
             <br>
             <div>
               <textarea hidden="true" id="base64textarea" placeholder="Base64 will appear here" class="form-control" rows="3"></textarea>
             </div>
-            <div class="p-3 mb-2 bg-danger text-white" id="highchance" hidden=true>According to our PALM prediction, the chance that you have Pneumonia is <span id="Pneumonia-predict-high"></span>, but do remember that our model does not replace a diagnosis by an actual physician.<br>We suggest that you see your physician as soon as possible.</div>
-            <div class="p-3 mb-2 bg-warning text-dark" id="mildchance" hidden=true>Our PALM model says that you have a <span id="Pneumonia-predict-medium"></span> chance of having Pneumonia, and this is the grey area of our model. So we recommend seeing your physician to make sure that everything is ok.</div>
-            <div class="p-3 mb-2 bg-success text-white" id=lowchance hidden=true>Great News! according to our PALM model there is a <span id="Pneumonia-predict-low"></span> chance that you have Pneumonia. We would still recommend seeing your physician, but we do not believe that there is Pneumonia present.</div>
-            <dialog id="mediumDialog">Our model could not accurately decide the presence or absense of Pneumonia<br>We are still perfecting our model, but recommned seeing a physician for a diagnosis<br><button id="mediumhide">Close</button></dialog>
-            <dialog id="highDialog">The model detected that there is a higher probability of Pneumonia.<br>
+            <div class="p-3 mb-2 bg-danger text-white" id="highchance" hidden=true>According to our PALM prediction, the chance that you have Pneumonia is <span id="Pneumonia-predict-high"></span>, but do remember that our model does not replace a diagnosis by an actual physician.<br>We suggest that you see your physician as soon as possible. Please visit our FAQ if you have any questions.</div>
+            <div class="p-3 mb-2 bg-warning text-dark" id="mildchance" hidden=true>Our PALM model says that you have a <span id="Pneumonia-predict-medium"></span> chance of having Pneumonia, and this is the gray area of our model. We recommend seeing your physician to make sure that everything is ok.</div>
+            <div class="p-3 mb-2 bg-success text-white" id=lowchance hidden=true>Great News! according to our PALM model there is a <span id="Pneumonia-predict-low"></span> chance that you have Pneumonia. We would still recommend seeing your physician, but we do not believe that there is pneumonia present.</div>
+            <dialog id="mediumDialog">Our model could not accurately decide the presence or absense of pneumonia<br>We are still perfecting our model, but recommned seeing a physician for a diagnosis.<br><button id="mediumhide">Close</button></dialog>
+            <dialog id="highDialog">The model detected that there is a higher probability of pneumonia.<br>
               Individual cases vary and we recommend that you consult your physician.<br><button id="highhide">Close</button></dialog>
-            <div><img class="img-rounded" id="shownimage" src="Images/Pneumonia/Pneumonia2.jpeg" hidden=true style="width:500px;height:500px"></div>
+            <div><img class="img-rounded" id="shownimage" src="" hidden=true style="width:500px;height:500px"></div>
           </div>
         </div>
       </div>
@@ -114,7 +121,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Sample Images</h2>
-          <h3 class="section-subheading text-muted">These are some images of Pneumonia x-rays and normal x-rays<br>
+          <h3 class="section-subheading text-muted">These are some images of Pnuemonia x-rays and normal x-rays<br>
           The PALM score is the percentage chance that the image has Pneumonia</h3>
         </div>
       </div>
@@ -226,10 +233,10 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>August 2018</h4>
-                  <h4 class="subheading">Our Beginnings</h4>
+                  <h4 class="subheading">Our Humble Beginnings</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">MyPALM was first created when a group of students decided to help solve a problem in society.</p>
+                  <p class="text-muted">MyPALM was first created when our a group of friends decided that it was time for a change.</p>
                 </div>
               </div>
             </li>
@@ -240,10 +247,10 @@
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>December 2018</h4>
-                  <h4 class="subheading">Founding</h4>
+                  <h4 class="subheading">A Team is Made</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">To begin with, the team started to collect around 1000 images of chest x-ray images with labels of pneumonia vs normal. Then, using a variety of data augmentation techniques like random cropping, rotation, Gaussian noise, and more, the team improved the robustness of the model. PALM is short for Pneumonia Artificial Learning Model.</p>
+                  <p class="text-muted">MyPALM started in the production faze. The team started collecting massive amounts of data (around 6000 images) and started the training of their model: “PALM” This model is now the most advanced model in the world and actually stands for Pneumonia Artificial Learning Model. </p>
                 </div>
               </div>
             </li>
@@ -257,7 +264,7 @@
                   <h4 class="subheading">Transition to Full Service</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">The team decided it was time to increase the reach and impact of this service. They then transitioned PALM from a python shell script to a website with an interface that allows people in the community to upload their own chest x-ray images and scan for potential detection of pneumonia.</p>
+                  <p class="text-muted">The team decided it was time to move away from creating the model and move on to actually helping people with it. They went to local clinics to show them this model and asked how they can use it to help people in need.</p>
                 </div>
               </div>
             </li>
@@ -271,7 +278,7 @@
                   <h4 class="subheading">To The Future</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">The team hopes to maximize the impact that machine learning and healthcare diagnostic services like PALM can do with the community. It is important to remember that PALM is for informational purposes only. If you have any concerns regarding your health with pneumonia, we strongly advise you to consult with your physician. PALM is one step into AI diagnostics, and with more work, we can make this a reality.</p>
+                  <p class="text-muted">The team hopes that before 2020 that this model will at least be used within the county that they reside. Although this may seem like a small step, it is one of many that will lead to revolutionizing the world.</p>
                 </div>
               </div>
             </li>
@@ -288,20 +295,231 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="bg-light page-section" id="faq-scroll-stop">
+      
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">FAQ</h2>
+                <h3 class="section-subheading text-muted">Frquently Asked Questions</h3>
+              </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="nav nav-pills faq-nav" id="faq-tabs" role="tablist" aria-orientation="vertical">
+                    <a href="#tab1" class="nav-link active" data-toggle="pill" role="tab" aria-controls="tab1" aria-selected="true">
+                        <i class="mdi mdi-help-circle"></i> Frequently Asked Questions
+                    </a>
+                    <a href="#tab2" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab2" aria-selected="false">
+                        <i class="mdi mdi-account"></i> Team
+                    </a>
+                    <a href="#tab3" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab3" aria-selected="false">
+                        <i class="mdi mdi-account-settings"></i> Diagnosis
+                    </a>
+                    <a href="#tab4" class="nav-link" data-toggle="pill" role="tab" aria-controls="tab4" aria-selected="false">
+                        <i class="mdi mdi-heart"></i> Future
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content" id="faq-tab-content">
+                    <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
+                        <div class="accordion" id="accordion-tab-1">
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-1-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">What is MyPALM?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
+                                    <div class="card-body">
+                                        <p>MyPALM is an advanced application created by our team. It has the ability to take images of chest x-rays and from there discern where or not a patient has pneumonia using Machine Learning.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-1-heading-2">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-2" aria-expanded="false" aria-controls="accordion-tab-1-content-2">What is PALMnet?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-1-content-2" aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
+                                    <div class="card-body">
+                                        <p>MyPALM is based off PALMnet, our secret Neural Network through which every images passses through. It is extremely accurate and uses convolutional Neural Networks. It also has all the power of Google's Resnetv50, since PALMnet was created using transfer learning with Resnet as the base model.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-1-heading-3">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-3" aria-expanded="false" aria-controls="accordion-tab-1-content-3">What are Neural Networks?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
+                                    <div class="card-body">
+                                        <p>This is a question that is hard to answer, since there are decades of theory behind it. At its lowest level, Neural Networks are essentially ways to get computers to do things with being explicitly programmed. It allows computers to think in similar ways to humans.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-1-heading-4">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-4" aria-expanded="false" aria-controls="accordion-tab-1-content-4">How can I learn to do these kinds of things?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
+                                    <div class="card-body">
+                                        <p>There are many great reasources out there to learn about Data Science and Machine Learning since it is a very desired skill in the industry. Our recomendation is the Machine Learning Course on Courera by Andrew Ng. <a href="https://www.coursera.org/learn/machine-learning?utm_source=gg&utm_medium=sem&utm_content=07-StanfordML-US&campaignid=685340575&adgroupid=52515609594&device=c&keyword=machine%20learning%20mooc&matchtype=b&network=g&devicemodel=&adpostion=1t1&creativeid=243289762946&hide_mobile_promo&gclid=CjwKCAjw2qHsBRAGEiwAMbPoDEjh6GpF8IRN2fDnZsNr2nA-EOqoVzWbm7zWs0kJdY7aA1vzLgtxHBoC8GUQAvD_BwE">Machine Learning Course</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2">
+                        <div class="accordion" id="accordion-tab-2">
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-2-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-1" aria-expanded="false" aria-controls="accordion-tab-2-content-1">Who are the creators of MyPALM?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse show" id="accordion-tab-2-content-1" aria-labelledby="accordion-tab-2-heading-1" data-parent="#accordion-tab-2">
+                                    <div class="card-body">
+                                        <p>The creators of MyPALM are actually three students from Lambert High School. The first is Milind Chandramohan, the student responsible for creating this website. The second is Akshat Gautam, the one that created the legendary PALMnet Model. The third is Eric Ahn, who helped create the PALMnet Model and documentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-2-heading-2">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-2" aria-expanded="false" aria-controls="accordion-tab-2-content-2">What inspired the team to create MyPALM?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-2-content-2" aria-labelledby="accordion-tab-2-heading-2" data-parent="#accordion-tab-2">
+                                    <div class="card-body">
+                                        <p>MyPALM started from unfortunate circumstances. Milind's aunt died from pneumonia which caused him to think about how someone could die from such a common and treatable disease. This caused Milind to to reach out to Akshat and Eric. This is when they worked together to create MyPALM.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-2-heading-3">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-2-content-3" aria-expanded="false" aria-controls="accordion-tab-2-content-3">What do you hope to do in the future?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-2-content-3" aria-labelledby="accordion-tab-2-heading-3" data-parent="#accordion-tab-2">
+                                    <div class="card-body">
+                                        <p>All three hope to study computer science in college and use this knowledge to help their community, similarly to what they did here.</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3">
+                        <div class="accordion" id="accordion-tab-3">
+							<div class="card">
+                                <div class="card-header" id="accordion-tab-3-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-1" aria-expanded="false" aria-controls="accordion-tab-3-content-1">How do I use MyPALM?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse show" id="accordion-tab-3-content-1" aria-labelledby="accordion-tab-3-heading-1" data-parent="#accordion-tab-3">
+                                    <div class="card-body">
+                                        <p>First, click the Browse button and choose your x-ray image. Afterwards, click Predict. This will then give you a PALM score, and a simple message about the predicted outcome.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-3-heading-2">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-2" aria-expanded="false" aria-controls="accordion-tab-3-content-2">What does the PALM score mean?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-3-content-2" aria-labelledby="accordion-tab-3-heading-2" data-parent="#accordion-tab-3">
+                                    <div class="card-body">
+                                        <p>The PALM score represents the confidence on which PALMnet believes the patient has pneumonia. A higher score means a higher chance of the patient having pneumonia and vice versa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-3-heading-3">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-3" aria-expanded="false" aria-controls="accordion-tab-3-content-3">What should I do next?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-3-content-3" aria-labelledby="accordion-tab-3-heading-3" data-parent="#accordion-tab-3">
+                                    <div class="card-body">
+                                        <p>While MyPALM is very accurate, it is by no means a substitute to a doctor. If you have serious concerns whether you have pneumonia or any disease such as influenza that causes pneumonia, please call your physician immediately.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-3-heading-4">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-3-content-4" aria-expanded="false" aria-controls="accordion-tab-3-content-4">Who should I call?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-3-content-4" aria-labelledby="accordion-tab-3-heading-4" data-parent="#accordion-tab-3">
+                                    <div class="card-body">
+                                        <p>For immediate medical assitance, call 911. If you have any questions about pneumonia, you can call the American Lung Association at (800)586-4872.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4">
+                        <div class="accordion" id="accordion-tab-4">
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-4-heading-1">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-1" aria-expanded="false" aria-controls="accordion-tab-4-content-1">What are your future plans with MyPALM?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse show" id="accordion-tab-4-content-1" aria-labelledby="accordion-tab-4-heading-1" data-parent="#accordion-tab-4">
+                                    <div class="card-body">
+                                        <p>We hope to integrate this application in many clinics in the area and across the US and hopefully expand in the future. With more data, we can get more accurate results and a better diagnosis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="accordion-tab-4-heading-2">
+                                    <h5>
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-4-content-2" aria-expanded="false" aria-controls="accordion-tab-4-content-2">Can this diagnose other diseases?</button>
+                                    </h5>
+                                </div>
+                                <div class="collapse" id="accordion-tab-4-content-2" aria-labelledby="accordion-tab-4-heading-2" data-parent="#accordion-tab-4">
+                                    <div class="card-body">
+                                        <p>Yes, in fact! MyPALM can be trained on many other data sets which can allow it to diagnose other diseases, and not just pneumonia. We hope to use this flexability in the future to help others with their diagnosis. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
   <!-- Team -->
-  <section class="bg-light page-section" id="team">
+  <section class="page-section" id="team">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Team</h2>
-          <h3 class="section-subheading text-muted">The people responsible for creating MyPALM</h3>
+          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h3 class="section-subheading text-muted">The people responsible for creating MyPALM!</h3>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Milind1.jpg" alt="">
             <h4>Milind Chandramohan</h4>
-            <p class="text-muted">Web Development Architect</p>
+            <p class="text-muted">Lead Architect</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -323,8 +541,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/Akshat.jpg" alt="">
             <h4>Akshat Gautam</h4>
-            <p class="text-muted">Artificial Intelligence Architect</p>
+            <p class="text-muted">ML Specialist</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -346,8 +565,9 @@
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <h4>Nilesh Manivannan</h4>
-            <p class="text-muted">Marketing & Outreach Director</p>
+            <img class="mx-auto rounded-circle" src="img/team/eric.jpg" alt="">
+            <h4>Eric Ahn</h4>
+            <p class="text-muted">ML Specialist</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -370,11 +590,13 @@
       </div>
       <div class="row">
         <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">MyPALM's goal is to contribute to the goal of helping make a difference in the community.</p>
+          <p class="large text-muted">MyPALM is this team's greatest achievement. Everyone learns many things in life, but they were able to use that knowledge to help others.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Clients -->
 
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -420,6 +642,46 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <span class="copyright">Copyright &copy; Your Website 2019</span>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Portfolio Modals -->
 
@@ -534,7 +796,7 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Pneumonia Chest 1</h2>
-                <p class="item-intro text-muted">This is a picture of a Chest that shows signs of Pneumonia</p>
+                <p class="item-intro text-muted">This is a picture of a chest that shows signs of Pneumonia</p>
                 <img class="img-fluid d-block mx-auto" src="Images/Pneumonia1.jpeg" alt="">
                 <p>Our model correctly predicts this is an x-ray with Pneumonia</p>
                 <ul class="list-inline">
@@ -566,15 +828,15 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Pneumonia Chest 2</h2>
-                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                <p class="item-intro text-muted">This is a picture of a chest that shows signs of Pneumonia</p>
                 <img class="img-fluid d-block mx-auto" src="Images/Pneumonia2.jpeg" alt="">
                 <p>Our model correctly predicts this is an x-ray with Pneumonia</p>
                 <ul class="list-inline">
-                  <li>PALM Score: 91.36%</li>
+                  <li>PALM Score: 96.25%</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Image</button>
+                  Close Project</button>
               </div>
             </div>
           </div>
@@ -597,15 +859,16 @@
             <div class="col-lg-8 mx-auto">
               <div class="modal-body">
                 <!-- Project Details Go Here -->
-                <h2 class="text-uppercase">Pneumonia Chest 3</h2>
+                <h2 class="text-uppercase">Pneumonia Chest 1</h2>
+                <p class="item-intro text-muted">This is a picture of a chest that shows signs of Pneumonia</p>
                 <img class="img-fluid d-block mx-auto" src="Images/Pneumonia3.jpeg" alt="">
-                <p>Our model correctly predicts this is an x-ray with Pneumonia</p>
+                <p>Our model correctly predicts this is an x-ray with Pneumonia<</p>
                 <ul class="list-inline">
-                  <li>PALM Score: 91.05%</li>
+                  <li>PALM Score: 96.25%</li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
                   <i class="fas fa-times"></i>
-                  Close Image</button>
+                  Close Project</button>
               </div>
             </div>
           </div>
@@ -628,106 +891,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
 
+  <!-- Functionality of the website -->
+  <script src="js/functionality.js"></script>
 </body>
-<script type="text/javascript">
 
-  var handleFileSelect = function(evt) {
-      var files = evt.target.files;
-      var file = files[0];
-    
-      if (files && file) {
-          var reader = new FileReader();
-
-          reader.onload = function(readerEvt) {
-              var binaryString = readerEvt.target.result;
-              document.getElementById("base64textarea").value = btoa(binaryString);
-              //$("shownimage").attr('src', readertarget.result);
-
-          };
-
-          reader.readAsBinaryString(file);
-          //document.getElementById("shownimage").hidden=false;
-      }
-  };
-
-  if (window.File && window.FileReader && window.FileList && window.Blob) {
-      document.getElementById('filePicker').addEventListener('change', handleFileSelect, false);
-  } else {
-      alert('The File APIs are not fully supported in this browser.');
-  }
-  $("#predict-button").click(function(event){
-          let base64Image = document.getElementById("base64textarea").value;
-          let message = {
-              image: base64Image
-          }
-          console.log(message);
-          $.post("http://0.0.0.0:5000/predict", JSON.stringify(message), function(response){
-
-
-              var probOfPneumonia = response.prediction.prob;
-              var stringofchance = "";
-              if(probOfPneumonia<20){
-                stringofchance = "low"
-                $("#Pneumonia-predict").text(probOfPneumonia);
-                $("#Pneumonia-predict-low").text(stringofchance);
-                document.getElementById("Pneumonia-predict").hidden=false;
-                document.getElementById("highchance").hidden=true;
-                document.getElementById("mildchance").hidden=true;
-                document.getElementById("lowchance").hidden=false;
-                document.getElementById("shownimage").hidden=false;
-              }else{
-                if(probOfPneumonia<80){
-                  stringofchance = "medium(not well known)";
-                  $("#Pneumonia-predict").text(probOfPneumonia);
-                  $("#Pneumonia-predict-medium").text(stringofchance);
-                  document.getElementById("mediumDialog").showModal();
-                  document.getElementById("lowchance").hidden=true;
-                  document.getElementById("highchance").hidden=true;
-                  document.getElementById("mildchance").hidden=true;
-                  
-                }else{
-                  stringofchance = "high";
-                  $("#Pneumonia-predict").text(probOfPneumonia);
-                  $("#Pneumonia-predict-high").text(stringofchance);
-                  document.getElementById("highDialog").showModal();
-                  document.getElementById("lowchance").hidden=true;
-                  document.getElementById("mildchance").hidden=true;
-                  document.getElementById("highchance").hidden=true;
-                }
-              }
-              //document.getElementById("shownimage1").hidden=true;
-              //document.getElementById("shownimage2").hidden=false;
-          });
-      });
-      $("#highhide").click(function(event){
-        document.getElementById("highDialog").close();
-        document.getElementById("highchance").hidden=false;
-        document.getElementById("Pneumonia-predict").hidden=false;
-        document.getElementById("shownimage").hidden=false;
-      });
-      $("#mediumhide").click(function(event){
-        document.getElementById("mediumDialog").close();
-        document.getElementById("mildchance").hidden=false;
-        document.getElementById("Pneumonia-predict").hidden=false;
-        document.getElementById("shownimage").hidden=false;
-      });
-      $("input[type=file]").change(function () {
-        var fieldVal = $(this).val();
-        document.getElementById("shownimage").hidden=true;
-        document.getElementById("lowchance").hidden=true;
-        document.getElementById("mildchance").hidden=true;
-        document.getElementById("highchance").hidden=true;
-        document.getElementById("Pneumonia-predict").hidden=true;
-      
-
-        // Change the node's value by removing the fake path (Chrome)
-         var fieldValDisplay = fieldVal.replace("C:\\fakepath\\", "");
-          var path = "Images/" + fieldValDisplay;
-          document.getElementById("shownimage").src=path;
-        if (fieldValDisplay != undefined || fieldValDisplay != "") {
-            $(this).next(".custom-file-label").attr('data-content', fieldValDisplay);
-            $(this).next(".custom-file-label").text(fieldValDisplay);
-        }
-      });
-  </script>
 </html>
